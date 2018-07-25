@@ -9,19 +9,31 @@ lst = []
 ###### create a function that does the above check, and call it whenever you get a factors
 ###### profit
 
-nextf = int(inp) - 1
-while nextf > 1:
-    fulllist.append(nextf)
-    rem = int(inp) % nextf
-    if not rem == 0:
-        nextf = nextf - 1
-        continue
-    else:
-        for i in fulllist:
-            if  (nextf % i) == 0:
-                lst.append(nextf)
-                nextf = nextf - 1
-                continue
+
+
+
+
+
+
+
+
+
+
+
+
+# nextf = int(inp) - 1
+# while nextf > 1:
+#     fulllist.append(nextf)
+#     rem = int(inp) % nextf
+#     if not rem == 0:
+#         nextf = nextf - 1
+#         continue
+#     else:
+#         for i in fulllist:
+#             if  (nextf % i) == 0:
+#                 lst.append(nextf)
+#                 nextf = nextf - 1
+#                 continue
 
 #for factors in list:
 
