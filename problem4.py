@@ -21,7 +21,7 @@ for x in range(len(numbers)):
             secondhalf = int(len(multstr)/2 * - 1)
             if len(firsthalf/2) % 2 == 0
                 reversefirst =
-                #list comprehention
+                #list comprehention checking left and right, building a list in either direcion
 
 
 
