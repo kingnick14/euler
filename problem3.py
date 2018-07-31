@@ -6,10 +6,8 @@ storeme = 0
 fulllist = []
 primes = []
 #rangelist = list(range(0,inp))
-def isprime(no, rangetop):
-    primelist = []
+def isprime(rangetop):
     holder = []
-    del primelist [:]
     del holder[:]
     print(rangetop)
     checker = range(1,int(math.sqrt(rangetop)+1))
