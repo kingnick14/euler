@@ -1,5 +1,5 @@
 #def reverseEven(changeMe):
-    changed = changeMe[:1]
+    #changed = changeMe[:1]
 
 import operator
 pal = 0
@@ -12,26 +12,33 @@ for x in range(len(numbers)):
     for y in range(x+1,len(numbers)):
         multint = numbers[x]*numbers[y]
         multstr = str(multint)
-        #print(len(multstr),'is the length of',multint)
-        count += 1
-
-        if len(multstr) % 2 == 0:
-            firsthalf = int(len(multstr)/2)
-
-            secondhalf = int(len(multstr)/2 * - 1)
-            if len(firsthalf/2) % 2 == 0
-                reversefirst =
-                #list comprehention checking left and right, building a list in either direcion
-
-
-
-
-
-            if multstr[:operator.__index__(firsthalf)] == multstr[operator.__index__(secondhalf):]:
+        if multstr == multstr[::-1]:
+            #print('debug:',multstr,' and ',multstr[::-1], 'is a multiple of ',x,'and',y)
+            if multint > pal:
                 pal = multint
-                print(pal)
 
-print(count,'combos found')
 print(pal)
+
+        #print(len(multstr),'is the length of',multint)
+    #     count += 1
+    #
+    #     if len(multstr) % 2 == 0:
+    #         firsthalf = int(len(multstr)/2)
+    #
+    #         secondhalf = int(len(multstr)/2 * - 1)
+    #         if len(firsthalf/2) % 2 == 0
+    #             reversefirst =
+    #             #list comprehention checking left and right, building a list in either direcion
+    #
+    #
+    #
+    #
+    #
+    #         if multstr[:operator.__index__(firsthalf)] == multstr[operator.__index__(secondhalf):]:
+    #             pal = multint
+    #             print(pal)
+#
+# print(count,'combos found')
+# print(pal)
 
         #print(mult,type(mult))
