@@ -1,15 +1,10 @@
 import math
-inp = int(input('Enter a number:'))
-factors = []
-mirrors = []
-storeme = 0
-fulllist = []
-primes = []
+
 #rangelist = list(range(0,inp))
 def isprime(rangetop):
     holder = []
     del holder[:]
-    print(rangetop)
+    #print(rangetop)
     checker = range(1,int(math.sqrt(rangetop)+1))
     for a in checker:
         #print('debug',rangetop % a, ' is remainder of',a)
@@ -23,32 +18,38 @@ def isprime(rangetop):
 ###### create a function that does the above check, and call it whenever you get a factors
 ###### profit
 
+if __name__ == '__main__':
+    inp = int(input('Enter a number:'))
+    factors = []
+    mirrors = []
+    storeme = 0
+    fulllist = []
+    primes = []
+    ### find SquareRoot of inp
+    rangelist = list(range(2,int(math.sqrt(inp)+1)))
+    print('#s below SquareRoot:',rangelist)
+    ### search for factors up to SquareRoot of Inp
+    for i in rangelist:
+        if not inp % i == 0: continue
+        factors.append(i)
+    print('factors:',factors)
 
-### find SquareRoot of inp
-rangelist = list(range(2,int(math.sqrt(inp)+1)))
-print('#s below SquareRoot:',rangelist)
-### search for factors up to SquareRoot of Inp
-for i in rangelist:
-    if not inp % i == 0: continue
-    factors.append(i)
-print('factors:',factors)
+    ### find mirrors of factors
+    for x in factors:
+        storeme = int(inp / x)
+        mirrors.append(storeme)
+    print('mirrors:', mirrors)
+    ### combine factors and mirrors
+    fulllist = factors + mirrors
+    print('Full list:',fulllist)
 
-### find mirrors of factors
-for x in factors:
-    storeme = int(inp / x)
-    mirrors.append(storeme)
-print('mirrors:', mirrors)
-### combine factors and mirrors
-fulllist = factors + mirrors
-print('Full list:',fulllist)
+    for z in fulllist:
+        if isprime(z) == True:
+            primes.append(z)
+        #print('debug 2:', z)
 
-for z in fulllist:
-    if isprime(z,z) == True:
-        primes.append(z)
-    #print('debug 2:', z)
-
-primes.sort()
-print('Your primes are', primes)
+    primes.sort()
+    print('Your primes are', primes)
 ### Check for primes bz dividing and storing factors and looking for len of 2
 
 # for y in fulllist:
